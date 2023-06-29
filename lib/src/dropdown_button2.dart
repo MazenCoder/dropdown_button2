@@ -994,19 +994,6 @@ class DropdownButton2<T> extends StatefulWidget {
     // When adding new arguments, consider adding similar arguments to
     // DropdownButtonFormField.
   })  : assert(
-          items == null ||
-              items.isEmpty ||
-              value == null ||
-              items.where((DropdownMenuItem<T> item) {
-                    return item.value == value;
-                  }).length ==
-                  1,
-          "There should be exactly one item with [DropdownButton]'s value: "
-          '$value. \n'
-          'Either zero or 2 or more [DropdownMenuItem]s were detected '
-          'with the same value',
-        ),
-        assert(
           menuItemStyleData.customHeights == null ||
               items == null ||
               items.isEmpty ||
