@@ -1323,11 +1323,6 @@ class DropdownButton2State<T> extends State<DropdownButton2<T>>
       _selectedIndex = null;
       return;
     }
-
-    assert(widget.items!
-            .where((DropdownMenuItem<T> item) => item.value == widget.value)
-            .length ==
-        1);
     for (int itemIndex = 0; itemIndex < widget.items!.length; itemIndex++) {
       if (widget.items![itemIndex].value == widget.value) {
         _selectedIndex = itemIndex;
